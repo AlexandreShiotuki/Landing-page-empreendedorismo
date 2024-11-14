@@ -88,6 +88,25 @@
         <p><a href="#contato">Contato</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        // Smooth Scroll for Navigation Links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// FAQ Toggle
+document.querySelectorAll('.faq h3').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+});
+        
+    </script>
 </body>
 </html>
