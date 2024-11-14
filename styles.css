@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,78 +6,186 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: #333;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
+/* Header */
 header {
-    background: #333;
+    background-color: #0052cc;
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Hero Section */
 .hero {
-    background: #f4f4f4;
-    padding: 2rem;
+    background-image: linear-gradient(rgba(0, 82, 204, 0.8), rgba(0, 82, 204, 0.8)), url('https://via.placeholder.com/1500');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .hero button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    background: #333;
-    color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.hero button:first-of-type {
+    background-color: #ffdd57;
+    color: #333;
+}
+
+.hero button:last-of-type {
+    background-color: #333;
+    color: #fff;
+}
+
+.hero button:hover {
+    opacity: 0.9;
+}
+
+/* Section Styling */
 .section {
-    padding: 2rem;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
+.section h2 {
+    font-size: 2.4rem;
+    color: #0052cc;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Steps Section */
 .steps {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .step {
-    background: #e3e3e3;
-    padding: 1rem;
-    border-radius: 5px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
     width: calc(25% - 1rem);
-    min-width: 200px;
+    min-width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.step h3 {
+    font-size: 1.3rem;
+    color: #0052cc;
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    color: #666;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ Section */
+.faq {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.faq h3 {
+    font-size: 1.2rem;
+    color: #0052cc;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.faq p {
+    color: #666;
+    display: none;
+    padding: 0.5rem 0;
+}
+
+.faq h3:hover {
+    color: #ffdd57;
+}
+
+/* Footer */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
